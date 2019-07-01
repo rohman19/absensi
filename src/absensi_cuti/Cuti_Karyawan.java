@@ -241,11 +241,13 @@ JOptionPane.showMessageDialog(null,e);
         tnik = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Cuti_Karyawan");
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setText("Alasan Mengambil Cuti");
@@ -399,6 +401,14 @@ JOptionPane.showMessageDialog(null,e);
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jButton7.setText("Tambah");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -444,12 +454,15 @@ JOptionPane.showMessageDialog(null,e);
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(hak, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jButton7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bt_simpan)
-                                .addGap(6, 6, 6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2)
-                                .addGap(6, 6, 6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3)
-                                .addGap(6, 6, 6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton5))
@@ -523,13 +536,13 @@ JOptionPane.showMessageDialog(null,e);
                         .addGap(112, 112, 112)
                         .addComponent(jLabel11)))
                 .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bt_simpan)
-                    .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)
                     .addComponent(jButton3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4)
-                        .addComponent(jButton5)))
+                    .addComponent(jButton2)
+                    .addComponent(bt_simpan)
+                    .addComponent(jButton7))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -537,7 +550,7 @@ JOptionPane.showMessageDialog(null,e);
                         .addComponent(jLabel12))
                     .addComponent(tcari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
         );
 
         pack();
@@ -620,6 +633,7 @@ JOptionPane.showMessageDialog(null,e);
         dataKaryawan.setVisible(true);
         dataKaryawan.setResizable(true);
         tnik.setText(Nik);
+       hak.setText("12");
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -652,6 +666,14 @@ JOptionPane.showMessageDialog(null,e);
          SetTabel();
     }//GEN-LAST:event_tbl_cutiMouseClicked
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        tid.requestFocus();
+        nomor();
+         String Tanggal = ((JTextField)tgl_mulai.getDateEditor().getUiComponent()).getText();
+            String Tanggal1 = ((JTextField)tgl_selesai.getDateEditor().getUiComponent()).getText();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField alasan;
@@ -662,6 +684,7 @@ JOptionPane.showMessageDialog(null,e);
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

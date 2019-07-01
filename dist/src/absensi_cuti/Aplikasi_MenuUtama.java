@@ -111,11 +111,12 @@ void setTanggal(){
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         ganti_passwordi = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Aplikasi Menu Utama");
@@ -179,15 +180,6 @@ void setTanggal(){
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel7.setText("ADMIN");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Data Karyawan");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jTabbedPane1.addTab("DataKaryawan", jButton1);
-
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton2.setText("Cuti Karyawan");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +216,23 @@ void setTanggal(){
         });
         jTabbedPane1.addTab("LogOut", jButton4);
 
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton1.setText("Data Karyawan");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jTabbedPane1.addTab("DataKaryawan", jButton1);
+
+        jButton3.setText("Aplikasi Kehadiran");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jTabbedPane1.addTab("Data Kehadiran", jButton3);
+
         javax.swing.GroupLayout jdpLayout = new javax.swing.GroupLayout(jdp);
         jdp.setLayout(jdpLayout);
         jdpLayout.setHorizontalGroup(
@@ -254,8 +263,8 @@ void setTanggal(){
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lnama, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 305, Short.MAX_VALUE))
-                            .addComponent(jTabbedPane1)
-                            .addComponent(tanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(tanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTabbedPane1)))))
         );
         jdpLayout.setVerticalGroup(
             jdpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,9 +273,7 @@ void setTanggal(){
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jdpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jdpLayout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(69, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jdpLayout.createSequentialGroup()
                         .addGroup(jdpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -283,9 +290,9 @@ void setTanggal(){
                         .addComponent(waktu, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         jdp.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdp.setLayer(jPanel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -379,6 +386,18 @@ void setTanggal(){
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+         Aplikasi_Kehadiran kehadiran = null;
+    try {
+        kehadiran = new Aplikasi_Kehadiran();
+    } catch (SQLException ex) {
+        Logger.getLogger(Aplikasi_MenuUtama.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    }
+        jdp.add(kehadiran);
+        kehadiran.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -418,6 +437,7 @@ void setTanggal(){
     private javax.swing.JButton ganti_passwordi;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;

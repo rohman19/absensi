@@ -86,8 +86,8 @@
                                   </Group>
                                   <EmptySpace min="0" pref="305" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jTabbedPane1" max="32767" attributes="0"/>
                               <Component id="tanggal" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTabbedPane1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -101,10 +101,7 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="69" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -124,11 +121,11 @@
                           <Component id="waktu" min="-2" pref="27" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="tanggal" min="-2" pref="34" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jTabbedPane1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -254,24 +251,6 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="14" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Data Karyawan"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-              </Events>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="DataKaryawan">
-                    <Property name="tabTitle" type="java.lang.String" value="DataKaryawan"/>
-                  </JTabbedPaneConstraints>
-                </Constraint>
-              </Constraints>
-            </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -340,6 +319,39 @@
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                   <JTabbedPaneConstraints tabName="LogOut">
                     <Property name="tabTitle" type="java.lang.String" value="LogOut"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Data Karyawan"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="DataKaryawan">
+                    <Property name="tabTitle" type="java.lang.String" value="DataKaryawan"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Aplikasi Kehadiran"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Data Kehadiran">
+                    <Property name="tabTitle" type="java.lang.String" value="Data Kehadiran"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
